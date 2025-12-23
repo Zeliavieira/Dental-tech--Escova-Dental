@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dental Tech | Perguntas Frequentes</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f0fdfa;
+      color: #134e4a;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header img {
+      width: 220px;
+      margin-bottom: 20px;
+      cursor: zoom-in;
+      transition: transform 0.3s;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #0f766e;
+    }
+
+    /* FAQ + MANUAL */
+    .faq-item {
+      border-bottom: 1px solid #99f6e4;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 18px;
+      font-size: 1.05rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #0f766e;
+      font-weight: bold;
+    }
+
+    .faq-question:hover {
+      background: #ccfbf1;
+    }
+
+    .faq-question span {
+      font-size: 1.4rem;
+      transition: transform 0.3s;
+    }
+
+    .faq-question.active span {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 18px 18px 18px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #134e4a;
+    }
+
+    .manual {
+      background: #ccfbf1;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    /* MODAL IMAGEM */
+    .image-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    .image-modal .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Escova Dental Tech</h1>
+
+    <img
+      src="imagens/escova.jfif"
+      alt="Escova Dental Tech"
+      onclick="openImage(this.src)"
+    />
+
+    <p>
+      Quem já sentiu dor ou sangramento ao escovar os dentes?<br><br>
+      A <strong>Dental Tech</strong> é uma escova sem cerdas, desenvolvida
+      exclusivamente para a limpeza dos dentes, removendo a placa bacteriana
+      sem machucar a gengiva e sem desgastar o esmalte dental.
+    </p>
+  </header>
+
+  <!-- MANUAL -->
+  <section>
+    <h2>📘 Manual de Uso</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Como usar a Dental Tech
+        <span>+</span>
+      </button>
+
+      <div class="faq-answer manual">
+        <strong>1️⃣ Aplique o creme dental</strong><br>
+        Use uma pequena quantidade de pasta comum ou para dentes sensíveis.<br><br>
+
+        <strong>2️⃣ Posicione nos dentes</strong><br>
+        Encoste suavemente, sem fazer força.<br><br>
+
+        <strong>3️⃣ Ligue o aparelho</strong><br>
+        Ative a vibração e deixe a tecnologia agir.<br><br>
+
+        <strong>4️⃣ Movimente lentamente</strong><br>
+        Passe por todos os dentes durante cerca de 2 minutos.<br><br>
+
+        <strong>5️⃣ Enxágue</strong><br>
+        Lave a boca e a escova após o uso.<br><br>
+
+        <strong>6️⃣ Frequência</strong><br>
+        Use de 2 a 3 vezes ao dia.
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>❓ Perguntas Frequentes</h2>
+       <div class="faq-item">
+      <button class="faq-question">A Dental Tech realmente limpa os dentes? <span>+</span></button>
+      <div class="faq-answer">Sim. A vibração inteligente remove a placa bacteriana sem desgaste do esmalte.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Ela substitui totalmente a escova tradicional? <span>+</span></button>
+      <div class="faq-answer">Sim. Ela foi criada para substituir a escova comum com mais conforto e segurança.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Posso usar se tiver gengiva sensível? <span>+</span></button>
+      <div class="faq-answer">Pode e deve. Ela não agride a gengiva e reduz sangramentos.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Quem usa aparelho pode usar? <span>+</span></button>
+      <div class="faq-answer">Sim. Não enrosca fios nem machuca a boca.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Ela causa desgaste nos dentes? <span>+</span></button>
+      <div class="faq-answer">Não. Por não ter cerdas, não desgasta o esmalte dental.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">É indicada para crianças? <span>+</span></button>
+      <div class="faq-answer">Sim, sempre com supervisão de um adulto.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Posso usar qualquer creme dental? <span>+</span></button>
+      <div class="faq-answer">Sim. Funciona com qualquer pasta comum ou específica.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Em quanto tempo vejo resultados? <span>+</span></button>
+      <div class="faq-answer">Desde o primeiro uso já é possível sentir mais conforto e limpeza.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Ajuda no mau hálito? <span>+</span></button>
+      <div class="faq-answer">Sim. A remoção eficiente das bactérias reduz o mau hálito.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Ela machuca se pressionar? <span>+</span></button>
+      <div class="faq-answer">Não, mas o ideal é usar sem força, deixando a tecnologia agir.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Precisa trocar a cabeça da escova? <span>+</span></button>
+      <div class="faq-answer">Não. Ela não possui cerdas e tem alta durabilidade.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Por que o investimento é maior? <span>+</span></button>
+      <div class="faq-answer">Porque evita problemas futuros, consultas e tratamentos caros.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Ela realmente limpa os dentes? <span>+</span></button>
+      <div class="faq-answer">Sim. A vibração remove placa bacteriana sem atrito.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Machuca a gengiva? <span>+</span></button>
+      <div class="faq-answer">Não. É indicada para gengivas sensíveis.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Quem usa aparelho pode usar? <span>+</span></button>
+      <div class="faq-answer">Sim. Não enrosca fios nem causa feridas.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Substitui a escova comum? <span>+</span></button>
+      <div class="faq-answer">Sim. Ela foi criada para substituir a escova tradicional.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Ajuda no mau hálito? <span>+</span></button>
+      <div class="faq-answer">Sim. Remove bactérias causadoras do mau hálito.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Posso usar todo dia? <span>+</span></button>
+      <div class="faq-answer">Sim. O uso diário é recomendado.</div>
+    </div>
+  </section>
+
+  <footer>
+    Dental Tech — cuidado, conforto e saúde bucal
+  </footer>
+
+</div>
+
+<!-- MODAL IMAGEM -->
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+  <span class="close">&times;</span>
+  <img id="modalImg">
+</div>
+
+<script>
+  // FAQ + MANUAL
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      button.classList.toggle('active');
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+
+  // IMAGEM EXPANDIR
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+
+  function openImage(src) {
+    modal.style.display = 'flex';
+    modalImg.src = src;
+  }
+
+  function closeImage() {
+    modal.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
